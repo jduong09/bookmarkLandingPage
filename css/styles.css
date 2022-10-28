@@ -7,7 +7,9 @@ body {
   display: none !important;
 }
 
-#img-menu-open, #img-menu-close, .item-menu > a, .header-list-social-media-links > li > svg, .btn-cta, .list-features > li, .btn-install, .img-arrow {
+#img-menu-open, #img-menu-close, .item-menu > a, .header-list-social-media-links > li > svg,
+.btn-cta, .list-features > li, .btn-install, .item-question > div:first-of-type:hover, .img-arrow,
+#input-submit:hover, .item-helpful-link > a:hover, .item-social-media-link > svg:hover {
   cursor: pointer;
 }
 
@@ -69,6 +71,10 @@ nav {
   letter-spacing: .2rem;
 }
 
+.item-menu > a:hover {
+  color: hsl(0, 94%, 66%);
+}
+
 .item-menu:last-of-type > a {
   display: block;
   width: 100%;
@@ -76,6 +82,10 @@ nav {
   border: 2px solid hsl(0, 0%, 100%);
   border-radius: 5px;
   font-weight: 500;
+}
+
+.item-menu:last-of-type > a:hover {
+  border-color: hsl(0, 94%, 66%);
 }
 
 .header-list-social-media-links {
@@ -117,15 +127,24 @@ nav {
   border-radius: 5px;
   font-weight: 500;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+  border: 1px solid hsl(231, 69%, 60%);
+  background-color: hsl(231, 69%, 60%);
+  color: hsl(0, 0%, 100%);
 }
 
-.chrome {
-  background-color: hsl(231, 69%, 60%);
-  color: white;
+.chrome:hover, .item-feature > .btn-cta:hover, .div-faq > button:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(231, 69%, 60%);
 }
 
 .firefox {
-  color: hsl(229, 8%, 60%);
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(229, 31%, 21%);
+  border-color: transparent;
+}
+
+.firefox:hover {
+  border-color: hsl(229, 31%, 21%);
 }
 
 .div-features, .div-download {
@@ -143,6 +162,10 @@ nav {
   border-top: .1px solid hsl(229, 8%, 60%);
   color: hsl(229, 8%, 60%);
   position: relative;
+}
+
+.list-features > li:hover, .item-helpful-link > a:hover {
+  color: hsl(0, 94%, 66%);
 }
 
 .list-features > li:last-of-type {
@@ -235,11 +258,17 @@ nav {
 .item-browser > button {
   margin-top: 3rem;
   background-color: hsl(231, 69%, 60%);
+  border: 1px solid hsl(231, 69%, 60%);
   color: hsl(0, 0%, 100%);
   border-radius: 5px;
   padding: 1rem 0;
   width: 100%;
   font-weight: 500;
+}
+
+.item-browser > button:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(231, 69%, 60%);
 }
 
 .div-faq {
@@ -260,6 +289,10 @@ nav {
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
   border-bottom: .1px solid hsl(229, 8%, 60%);
+}
+
+.item-question > div:first-of-type:hover > h4 {
+  color: hsl(0, 94%, 66%);
 }
 
 .item-question > div:first-of-type.open {
@@ -330,6 +363,7 @@ input {
   padding: 1rem 1.5rem;
   margin: 1rem 0;
   border-radius: 5px;
+  border: 1px solid transparent;
 }
 
 #input-email {
@@ -363,6 +397,12 @@ input {
   background-color: hsl(0, 94%, 66%);
 }
 
+#input-submit:hover {
+  border-color: hsl(0, 94%, 66%);
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 94%, 66%);
+}
+
 footer {
   padding: 2.5rem;
   text-align: center;
@@ -389,4 +429,8 @@ footer {
   align-items: center;
   width: 25%;
   margin: 0 auto;
+}
+
+.header-list-social-media-links > li > svg:hover > path, .item-social-media-link > svg:hover > path {
+  fill: hsl(0, 94%, 66%);
 }
