@@ -113,13 +113,20 @@ nav {
   font-size: 2rem;
   font-weight: 500;
   color: hsl(229, 31%, 21%);
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
 }
 
 .div-hero > div > div {
   line-height: 1.5rem;
   color: hsl(229, 8%, 60%);
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
+}
+
+.div-ctas {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
 }
 
 .btn-cta {
@@ -227,14 +234,10 @@ nav {
   padding: 1.5rem;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
   position: relative;
-}
-
-.item-browser::after {
-  position: absolute;
-  content: url('../images/bg-dots.svg');
-  width: 100%;
-  bottom: 5.5rem;
-  left: 0;
+  background-image: url('../images/bg-dots.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom 6rem left 0px;
 }
 
 .img-browser {
@@ -433,4 +436,62 @@ footer {
 
 .header-list-social-media-links > li > svg:hover > path, .item-social-media-link > svg:hover > path {
   fill: hsl(0, 94%, 66%);
+}
+
+@media (min-width: 376px) {
+  .div-ctas {
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 576px) {
+  #img-hero {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .div-hero > div > h2, .div-hero > div > div, .img-feature,
+  .div-features > div, .item-feature > div, .list-features > li, .div-download > div,
+   .div-faq > div, .item-question, .div-email > h3, form {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-feature {
+    margin: 6rem auto;
+  }
+
+  .item-feature::after {
+    width: 80%;
+    top: 100px;
+  }
+
+  .item-browser {
+    width: 80%;
+  }
+
+  .header-list-social-media-links, .list-social-media-links {
+    width: 18%;
+  }
+}
+
+@media (min-width: 767px) {
+  .div-hero > div > h2, .div-hero > div > div, .img-feature,
+  .div-features > div, .item-feature > div, .list-features > li, .div-download > div,
+   .div-faq > div, .item-question, .div-email > h3, form {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .item-browser {
+    width: 70%;
+  }
+
+  .header-list-social-media-links, .list-social-media-links {
+    width: 14%;
+  }
 }
