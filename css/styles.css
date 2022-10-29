@@ -99,6 +99,20 @@ nav {
 /* Main */
 .div-hero {
   margin: 3rem 0 8rem 0;
+  position: relative;
+}
+
+.div-hero::after {
+  content: '';
+  width: 100%;
+  height: 200px;
+  background-color: hsl(231, 69%, 60%);
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+  position: absolute;
+  top: 60px;
+  right: -60px;
+  z-index: -1;
 }
 
 .div-hero > div {
@@ -464,7 +478,7 @@ footer {
     margin: 6rem auto;
   }
 
-  .item-feature::after {
+  .div-hero::after, .item-feature::after {
     width: 80%;
     top: 100px;
   }
@@ -481,10 +495,8 @@ footer {
 @media (min-width: 767px) {
   .div-hero > div > h2, .div-hero > div > div, .img-feature,
   .div-features > div, .item-feature > div, .list-features > li, .div-download > div,
-   .div-faq > div, .item-question, .div-email > h3, form {
+  .div-faq > div, .item-question, .div-email > h3, form {
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .item-browser {
@@ -493,5 +505,109 @@ footer {
 
   .header-list-social-media-links, .list-social-media-links {
     width: 14%;
+  }
+}
+
+@media (min-width: 922px) {
+  nav {
+    position: initial;
+    top: initial;
+    left: initial;
+    width: auto;
+    height: auto;
+    padding: 0;
+    text-align: start;
+    background-color: transparent;
+  }
+
+  .list-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .item-menu {
+    padding: 0;
+    border-top: none;
+    margin-left: 1.5rem;
+  }
+
+  .item-menu > a {
+    color: hsl(229, 31%, 21%);
+    letter-spacing: normal;
+    font-weight: 400;
+  }
+
+  .item-menu:last-of-type > a {
+    padding: .5rem 1.25rem;
+    background-color: hsl(0, 94%, 66%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    font-weight: 400;
+  }
+
+  .item-menu:last-of-type > a:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 94%, 66%);
+  }
+
+  .div-hero {
+    display: flex;
+    overflow: hidden;
+  }
+
+  #img-hero {
+    width: 55%;
+    order: 2;
+    margin-right: -3rem;
+  }
+
+  .div-hero > div {
+    order: 1;
+    text-align: start;
+  }
+
+  .div-hero > div > h2, .div-hero > div > div {
+    width: auto;
+    margin: 0 0 1rem 0;
+  }
+
+  .div-hero > div > div:last-of-type {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .div-ctas > button {
+    padding: .5rem 1.25rem;
+    width: auto;
+    height: fit-content;
+  }
+
+  .chrome {
+    margin-right: 1rem;
+  }
+
+  .div-hero > div > h2, .div-hero > div > div, .img-feature,
+  .div-features > div, .item-feature > div, .list-features > li, .div-download > div,
+  .div-faq > div, .item-question, .div-email > h3, form {
+    width: 55%;
+  }
+
+  .list-features {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .list-features > li {
+    border-top: none;
+    border-bottom: .1px solid hsl(229, 8%, 60%);
+  }
+
+  .list-features > li.active::after {
+    width: 100%;
+    bottom: -1.8px;
+    left: 0;
   }
 }
