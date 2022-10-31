@@ -229,14 +229,14 @@ nav {
   margin: 6rem 0;
 }
 
-.div-features > h3, .item-feature > h3, .div-download > h3, .div-faq > h3 {
+.div-features > h3, .item-feature > div > h3, .div-download > h3, .div-faq > h3 {
   font-size: 1.5rem;
   font-weight: 500;
   color: hsl(229, 31%, 21%);
   margin-bottom: 1rem;
 }
 
-.div-features > div, .item-feature > div, .div-download > div, .div-faq > div, .item-question > div:last-of-type {
+.div-features > div, .item-feature > div > div, .div-download > div, .div-faq > div, .item-question > div:last-of-type {
   line-height: 1.5rem;
   color: hsl(229, 8%, 60%);
   margin-bottom: 1rem;
@@ -467,7 +467,7 @@ footer {
   }
 
   .div-hero > div > h2, .div-hero > div > div, .img-feature,
-  .div-features > div, .item-feature > div, .list-features > li, .div-download > div,
+  .div-features > div, .item-feature > div > div, .list-features > li, .div-download > div,
    .div-faq > div, .item-question, .div-email > h3, form {
     width: 80%;
     margin-left: auto;
@@ -494,7 +494,7 @@ footer {
 
 @media (min-width: 767px) {
   .div-hero > div > h2, .div-hero > div > div, .img-feature,
-  .div-features > div, .item-feature > div, .list-features > li, .div-download > div,
+  .div-features > div, .item-feature > div > div, .list-features > li, .div-download > div,
   .div-faq > div, .item-question, .div-email > h3, form {
     width: 70%;
   }
@@ -589,7 +589,7 @@ footer {
   }
 
   .div-hero > div > h2, .div-hero > div > div, .img-feature,
-  .div-features > div, .item-feature > div, .list-features > li, .div-download > div,
+  .div-features > div, .item-feature > div > div, .list-features > li, .div-download > div,
   .div-faq > div, .item-question, .div-email > h3, form {
     width: 55%;
   }
@@ -609,5 +609,81 @@ footer {
     width: 100%;
     bottom: -1.8px;
     left: 0;
+  }
+}
+
+@media (min-width: 922px) {
+  .div-hero {
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .div-hero::after {
+    top: 110px;
+    right: -420px;
+  }
+
+  #img-hero {
+    width: 45%;
+    margin-right: -1rem;
+  }
+
+  .div-hero > div > h2 {
+    width: auto;
+  }
+
+  .div-hero > div > div {
+    width: 90%;
+  }
+
+  .div-features, .div-download {
+    margin: 2rem 0;
+  }
+
+  .item-feature {
+    display: flex;
+    align-items: center;
+  }
+
+  .item-feature::after {
+    top: 180px;
+    left: -320px;
+  }
+
+  .img-feature {
+    width: 50%;
+    margin: 4rem 0;
+  }
+
+  .item-feature > div {
+    text-align: start;
+    margin-left: 3rem;
+  }
+
+  .item-feature > div > div {
+    margin: 0 0 1rem 0;
+    width: auto;
+  }
+
+  .item-feature .btn-cta {
+    padding: .5rem 1rem;
+  }
+
+  .list-downloads {
+    display: flex;
+  }
+
+  .item-browser {
+    width: 30%;
+  }
+
+  .item-browser:nth-of-type(2n) {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+
+  .item-browser:last-of-type {
+    margin-top: 4.5rem;
+    margin-bottom: -1.5rem;
   }
 }
