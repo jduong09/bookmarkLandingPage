@@ -785,3 +785,120 @@ footer {
     width: 8%;
   }
 }
+
+@media (min-width: 1400px) {
+  header {
+    padding: 3rem 9rem;
+  }
+
+  .item-menu {
+    margin-left: 3rem;
+  }
+
+  .div-hero {
+    padding: 0 0 3rem 9rem;
+  }
+
+  .div-hero::after {
+    width: 50%;
+    height: 315px;
+    top: 140px;
+    right: -200px;
+  }
+
+  #img-hero {
+    margin-right: 3rem;
+  }
+
+  .div-hero > div > h2 {
+    font-size: 3rem;
+  }
+
+  .div-hero > div > div {
+    width: 70%;
+  }
+
+  .div-features > h3, .item-feature > div > h3, .div-download > h3, .div-faq > h3 {
+    font-size: 1.75rem;
+  }
+
+  .div-features > div {
+    width: 33%;
+  }
+
+  .list-features {
+    width: 43%;
+  }
+
+  .list-feature-images {
+    padding: 0 9rem 0 0;
+  }
+
+  .img-feature {
+    width: 44%;
+    margin-left: 9rem;
+  }
+
+  .item-feature > div {
+    width: 35%;
+    margin-left: 6rem;
+  }
+
+  .item-feature::after {
+    top: 165px;
+    left: -400px;
+    height: 350px;
+  }
+
+  .div-download {
+    margin: 6rem 0;
+  }
+
+  .div-download > div {
+    width: 35%;
+  }
+
+  .list-downloads {
+    padding: 0 18rem;
+  }
+
+  .div-faq {
+    margin-bottom: 6rem;
+  }
+
+  .div-faq > div {
+    width: 33%;
+  }
+
+  .item-question {
+    width: 35%;
+  }
+
+  .div-email {
+    padding: 3rem 0;
+  }
+
+  .div-email > h3 {
+    font-size: 1.75rem;
+  }
+
+  .div-email > h3, form {
+    width: 30%;
+  }
+
+  .div-email-input {
+    width: 70%;
+  }
+
+  #input-email, #input-submit {
+    padding: .75rem 1rem;
+  }
+
+  footer {
+    padding: 1.5rem 9rem;
+  }
+
+  #footer-logo, .item-helpful-link {
+    margin-right: 3rem;
+  }
+}
